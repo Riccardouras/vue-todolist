@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <div id="app">
-        <div>
+   
+    <div id="app" class="container">
+        <header>
+            <h1>ToDoList</h1>
+            <p>inserisci la lista delle tue attività, provalo è GRATIS!</p>
+        </header>
+        <div class="list">
             <input type="text" v-model="newTask" placeholder="Programmi della settimana" @keyup.enter="addTask">
-            <button @click="addTask">Aggiungi</button>
+            <button class="btn" @click="addTask">Aggiungi</button>
             <ul>
-                <li v-for="(task, index) in toDoList" :class="{ done: task.done }" @click="completedTask(index)">
-                    {{task.text}} 
-                    <button @click="completedTask(index)">&checkmark;</button>
-                    <button @click="removeTask">&cross;</button>
+                <li v-for="(task, index) in toDoList"  @click="completedTask(index)">
+                    <span :class="{ done: task.done }">{{task.text}}</span>
+                    <div>
+                        <button @click="completedTask(index)">&checkmark;</button>
+                        <button @click="removeTask">&cross;</button>
+                    </div>
                 </li>
             </ul>
         </div>
