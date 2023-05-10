@@ -16,6 +16,9 @@ createApp({
         },
         completedTask(index) {
             this.toDoList[index].done = !this.toDoList[index].done;
-}
+    },
+        removeTask(index){
+           this.toDoList.splice(index, 1)
+        }
     },
 }).mount("#app")

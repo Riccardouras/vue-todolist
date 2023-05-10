@@ -13,7 +13,11 @@
             <input type="text" v-model="newTask" placeholder="Programmi della settimana">
             <button @click="addTask">Aggiungi</button>
             <ul>
-                <li v-for="(task, index) in toDoList" :class="{ done: task.done }">{{task.text}} <button @click="completedTask(index)">&checkmark;</button></li>
+                <li v-for="(task, index) in toDoList" :class="{ done: task.done }">
+                    {{task.text}} 
+                    <button @click="completedTask(index)">&checkmark;</button>
+                    <button @click="removeTask">&cross;</button>
+                </li>
             </ul>
         </div>
     </div>
