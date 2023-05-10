@@ -12,7 +12,10 @@ createApp({
             if (this.newTask) {
                 this.toDoList.push({ text: this.newTask, done: false });
                 this.newTask = '';
-        }
-    },
+            }
+        },
+        completedTask(index) {
+            this.toDoList[index].done = !this.toDoList[index].done;
 }
+    },
 }).mount("#app")
