@@ -4,7 +4,11 @@ createApp({
     data() {
         return {
             newTask: "",
-            toDoList: []
+            toDoList: [
+                {text: "Andare a raccogliere asparagi", done: false},
+                {text: "Guardare gli internazionali di tennis a Roma", done : false},
+                {text: "Sniffare colla" , done: true}
+            ]
         }
     },
     methods: {

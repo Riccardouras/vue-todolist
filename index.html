@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <div>
-            <input type="text" v-model="newTask" placeholder="Programmi della settimana">
+            <input type="text" v-model="newTask" placeholder="Programmi della settimana" @keyup.enter="addTask">
             <button @click="addTask">Aggiungi</button>
             <ul>
                 <li v-for="(task, index) in toDoList" :class="{ done: task.done }">
