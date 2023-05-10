@@ -18,7 +18,7 @@
             <input type="text" v-model="newTask" placeholder="Programmi della settimana" @keyup.enter="addTask">
             <button class="btn" @click="addTask">Aggiungi</button>
             <ul>
-                <li v-for="(task, index) in toDoList"  >
+                <li v-for="(task, index) in toDoList">
                     <span @click="completedTask(index)" :class="{ done: task.done }">{{task.text}}</span>
                     <div>
                         <button @click="completedTask(index)">&checkmark;</button>

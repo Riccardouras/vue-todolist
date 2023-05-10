@@ -75,7 +75,9 @@ li > div button {
     cursor: pointer;
     margin-right: 5px;
 }
-
+ul{
+    margin-top: 20px;
+}
 .done {
     text-decoration: line-through;
 }
